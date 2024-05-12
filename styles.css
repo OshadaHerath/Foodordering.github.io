@@ -1,0 +1,350 @@
+body{
+    margin:10px;
+}
+
+h1{
+    margin:20px;
+    text-align: center;
+    text-shadow: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.fiery-glow {
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /
+}
+
+.menubutton{
+    position:absolute;
+    top:-90px;
+    left:20px;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background: none;
+}
+
+
+
+.menubutton:hover, .menubutton:focus {
+        background-color: #c0db76;
+      }
+    
+.menudropdown {
+     position: relative;
+     display: inline-block;
+    } 
+         
+.menucontent {
+        display: none;
+        position:relative;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+     }
+
+.menucontent a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+     }
+.show {display:block;}
+
+#cartbtn{
+    position: fixed;
+    top: 20px;
+    right:20px;
+    margin: 10px;
+    width: 60px;
+    height: 40px;
+    background: none;
+}
+
+.grid-container {
+    
+    display: grid;
+    place-items: center;
+    grid-template-columns: max-content max-content max-content;
+    padding: 30px;
+    width: 100%;
+    
+  }
+
+.grid-item{
+    padding:10px;
+    text-align: center;
+    
+}
+
+.foodinfo{
+display: flex;
+justify-content: space-between;
+}
+
+.foodname{
+    text-align: left;
+}
+
+.price{
+    text-align: right;
+}
+
+.foodname, .price{
+    display:inline;
+}
+
+
+
+.tcbody{
+    margin: 30px;
+}
+
+#cart {
+    margin-top: 20px;
+    float: right;
+    text-align: left;
+    background-color: rgb(167, 112, 112);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 70px; 
+    right: 20px; 
+    z-index: 1; 
+    border-color: rgb(0, 0, 0);
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+#total-cost {
+    font-weight: bold;
+}
+
+.feedbackh1{
+    
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    
+}
+
+#feedbackcontainer {
+        border: 2px solid #000000;
+        border-radius: 1px;
+        padding: 30px;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        width: 400px;
+        height: 300px;
+        z-index: 2;
+        background-color: aliceblue;
+        position: relative;
+        
+}
+
+#fname{
+    width: 100%;
+    padding: 10px;
+    font-size:16px;
+}
+
+#faddress{
+    width: 100%;
+    padding: 10px;
+    font-size:16px;
+}
+
+#feedback{
+    width: 100%;
+    padding: 10px;
+    font-size:16px;
+}
+
+#feedback-form{
+    text-align: center;
+
+}
+
+#ftmessage{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    font-size: 22px;
+}
+
+.fbody{
+    background-image:url(tcbg.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#tcpara{
+    text-align: center;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#quote{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: brown;
+}
+
+.slideshowcontainer{
+    
+    position: absolute;
+    margin: 0 auto;
+    max-width: 600px;
+    left: 350px;
+}
+
+.slide{
+    display: none;
+    width: 100%;
+}
+
+.slide.active{
+    display: block;
+}
+
+
+footer{
+    height: 100px;
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+    position: fixed; 
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    z-index: 1000;
+}
+
+footer i{
+    font-size:24px;
+    padding: 20px;
+    color: white;
+}
+
+
+#caloriebody{
+    background-image:url(calorie.jpg);
+}
+
+
+#caloriecontainer{
+    border: 2px solid black;
+    width: 300px; 
+    height: 400px;
+    padding: 10px;
+    margin: 0 auto; 
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    
+}
+#caloriedisplay{
+    position: relative;
+    font-size: 25px;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    color: red;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 10px;
+    }
+
+    .grid-item img {
+        width: 60%; 
+        height: auto;
+    }
+
+    .foodinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    #cartbtn {
+        position: fixed;
+        top: 10px;
+        right: 70px;
+        z-index: 1000; 
+        
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    #cart {
+        top: 50px;
+        right: 30px;
+        width: 50%;
+    }
+
+    .menubutton {
+        position: fixed;
+        top: 10px;
+        left: 70px;
+    }
+
+    .menucontent {
+        top: 50px;
+    }
+
+    .slideshowcontainer {
+        max-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden; 
+    }
+
+    .slide {
+        display: none; 
+        width: 100%; 
+    }
+
+    .slide.active {
+        display: block; 
+    }
+
+    
+    #feedbackcontainer {
+        width: 90%;
+    }
+
+    
+    #tcpara {
+        width: 90%;
+    }
+
+    
+    #caloriecontainer {
+        width: 90%;
+    }
+
+    
+}
+
