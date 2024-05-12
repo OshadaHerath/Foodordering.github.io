@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hot N' Fast</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <h1 class="text-danger fiery-glow">Hot N' Fast</h1>
+
+
+
+    <div class="menudropdown">
+        <button onclick="toggledropdown()" class="menubutton"><img src="bars.ico" height="20px" width="20px"> 
+          
+        <div id="dropdown" class="menucontent">
+          <a href="FAQ.html">Calory count</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="Feedback.html">Contact Us</a>
+          <a href="T&C.html">Terms and Conditions</a>
+        </div>
+      </div></button>
+  
+
+    <div class="grid-container">
+      <div class="grid-item"><img src="Chicken and cheese pizza.jpg" height="200px" width="350px"><div class="foodinfo"> <p class="foodname">Chicken and cheese pizza</p><p class="price">Rs.1500</p>
+        <button class="add-btn" onclick="addToCart('Chicken and cheese pizza', 1500)">Add</button></div></div>
+      <div class="grid-item"><img src="BBQ Chicken pizza.jpg" height="200px" width="350px"><div class="foodinfo"> <p class="foodname">BBQ Chicken pizza</p><p class="price">Rs.1400</p>
+        <button class="add-btn" onclick="addToCart('BBQ Chicken pizza', 1400)">Add</button></div></div>
+      <div class="grid-item"><img src="Beef and Cheese pizza.jpg" height="200px" width="350px"><div class="foodinfo"> <p class="foodname">Beef and Cheese pizza</p><p class="price">Rs.1700</p>
+        <button class="add-btn" onclick="addToCart('Beef and Cheese pizza', 1700)">Add</button></div></div>
+      <div class="grid-item"><img src="Chicken cheese burger.jpg" height="200px" width="350px"><div class="foodinfo"> <p class="foodname">Chicken cheeseburger</p><p class="price">Rs.800</p>
+        <button class="add-btn" onclick="addToCart('Chicken cheeseburger', 800)">Add</button></div></div>
+      <div class="grid-item"><img src="Beef Cheese burger.jpg" height="200px" width="350px"><div class="foodinfo"> <p class="foodname">Beef cheeseburger</p><p class="price">Rs.950</p>
+        <button class="add-btn" onclick="addToCart('Beef cheeseburger', 950)">Add</button></div></div>
+      <div class="grid-item"><img src="Bacon and Beef Cheese burger.jpg" height="200px" width="350px"><div class="foodinfo"> <p class="foodname">Bacon and Beef cheeseburger</p><p class="price">Rs.1250</p>
+        <button class="add-btn" onclick="addToCart('Bacon and Beef cheeseburger', 1250)">Add</button></div></div>
+      <div class="grid-item"><img src="small fries.jpg" height="300px" width="350px"><div class="foodinfo"> <p class="foodname">Small fries 10Pc</p><p class="price">Rs.300</p>
+        <button class="add-btn" onclick="addToCart('Small fries 10Pc<', 300)">Add</button></div></div>
+      <div class="grid-item"><img src="medium fries.jpg" height="300px" width="350px"><div class="foodinfo"> <p class="foodname">Medium fries 20Pc</p><p class="price">Rs.500</p>
+        <button class="add-btn" onclick="addToCart('Medium fries 20Pc', 500)">Add</button></div></div>
+      <div class="grid-item"><img src="Large fries.jpg" height="300px" width="350px"><div class="foodinfo"> <p class="foodname">large fries 30Pc</p><p class="price">Rs.750</p>
+        <button class="add-btn" onclick="addToCart('large fries 30Pc', 750)">Add</button></div></div>
+      <div class="grid-item"><img src="Coca cola.jpg" height="300px" width="350px"><div class="foodinfo"> <p class="foodname">Coca Cola</p><p class="price">Rs.300</p>
+        <button class="add-btn" onclick="addToCart('Coca Cola', 300)">Add</button></div></div>
+      <div class="grid-item"><img src="Pepsi.jpg" height="300px" width="350px"><div class="foodinfo"> <p class="foodname">Pepsi</p><p class="price">Rs.300</p>
+        <button class="add-btn" onclick="addToCart('Pepsi', 300)">Add</button></div></div>
+      <div class="grid-item"><img src="Sprite.jpg" height="300px" width="350px"><div class="foodinfo"> <p class="foodname">Sprite</p><p class="price">Rs.300</p>
+        <button class="add-btn" onclick="addToCart('Sprite', 300)">Add</button></div></div>
+    </div>
+    <button id="cartbtn" onclick="showCart()"><img src="cart.jpg" height="30px" width="40px"></button>
+
+    <div id="cart" style="display: none;">
+        <ul id="cart-items"></ul>
+        <p id="total-cost"></p>
+        <form id="order-form">
+          <div id="order-section" style="margin-top: 20px;">
+              <input type="text" id="name" placeholder="Enter your name" required><br><br>
+              <input type="text" id="address" placeholder="Enter your address" required><br><br>
+              <input type="tel" id="pnumber" placeholder="Enter your Phone number" required><br><br>
+              <button type="button" id="order-btn" onclick="placeOrder()">Order</button>
+          </div>
+      </form>
+  
+      <div id="ormessage" style="display: none;"></div>
+  
+    </div>
+</body>
+
+</html>
